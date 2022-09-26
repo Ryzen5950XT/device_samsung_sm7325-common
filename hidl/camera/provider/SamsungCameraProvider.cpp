@@ -27,7 +27,7 @@ const int kMaxCameraIdLen = 16;
 
 SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() {
 
-#ifdef SAMSUNG_SM7125_MODEL_a72q
+#ifdef SAMSUNG_SM7325_MODEL_a52sxq
     // tele
     mExtraIDs.push_back(52);
 #endif

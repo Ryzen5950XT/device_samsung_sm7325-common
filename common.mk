@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/sm7125-common
+COMMON_PATH := device/samsung/sm7325-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
@@ -68,7 +68,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl.sm7125 \
+    android.hardware.audio@6.0-impl.sm7325 \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.soundtrigger@2.2-impl \
     audio.a2dp.default \
@@ -111,11 +111,11 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth@1.0.vendor \
-    libbtdevice.sm7125
+    libbtdevice.sm7325
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.6-service.sm7125 \
+    android.hardware.camera.provider@2.6-service.sm7325 \
     android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.5-legacy \
     camera.device@1.0-impl \
@@ -157,9 +157,9 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
     libtinyxml \
     libtinyxml2 \
-    hwcomposer.atoll \
-    gralloc.atoll \
-    memtrack.atoll \
+    hwcomposer.lahaina \
+    gralloc.lahaina \
+    memtrack.lahaina \
     libqdMetaData \
     libdisplayconfig.qti \
     vendor.qti.hardware.display.mapper@1.1.vendor \
@@ -181,7 +181,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service-samsung.sm7125
+    android.hardware.biometrics.fingerprint@2.3-service-samsung.sm7325
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -228,7 +228,7 @@ PRODUCT_PACKAGES += \
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+    $(COMMON_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -241,7 +241,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7125
+    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7325
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -408,7 +408,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.sm7125
+    android.hardware.vibrator-service.sm7325
 
 # Tether
 PRODUCT_PACKAGES += \
@@ -464,4 +464,4 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
 # Inherit proprietary blobs
-$(call inherit-product, vendor/samsung/sm7125-common/sm7125-common-vendor.mk)
+$(call inherit-product, vendor/samsung/sm7325-common/sm7325-common-vendor.mk)

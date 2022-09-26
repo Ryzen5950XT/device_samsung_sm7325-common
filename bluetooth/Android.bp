@@ -1,5 +1,5 @@
 cc_library_static {
-    name: "libbtdevice.sm7125",
+    name: "libbtdevice.sm7325",
     defaults: ["fluoride_defaults"],
     stem: "libbtdevice",
     host_supported: true,

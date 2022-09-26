@@ -10,7 +10,7 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-#include "init_sm7125.h"
+#include "init_sm7325.h"
 
 #define MODEL_NAME_LEN 5
 #define BUILD_NAME_LEN 8
@@ -56,11 +56,11 @@ void vendor_load_properties()
     }
 
     if (device.size() == 0) {
-        LOG(ERROR) << "Could not detect device, forcing a52q";
-        device = "a52q";
+        LOG(ERROR) << "Could not detect device, forcing a52sxq";
+        device = "a52sxq";
     }
 
-    name = device + "nsxx";
+    name = device + "sxqxx";
 
     LOG(INFO) << "Found bootloader: %s", bootloader.c_str();
     LOG(INFO) << "Setting ro.product.model: %s", model.c_str();
