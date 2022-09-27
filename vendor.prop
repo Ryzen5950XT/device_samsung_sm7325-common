@@ -168,6 +168,10 @@ ro.vendor.epdg.support=true
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
 
 # Wifi
 wifi.aware.interface=wifi-aware0
